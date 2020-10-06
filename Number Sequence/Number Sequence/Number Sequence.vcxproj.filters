@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="数算作业.cpp">
+    <ClCompile Include="Number Sequence.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

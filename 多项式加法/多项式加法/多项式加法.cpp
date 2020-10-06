@@ -1,5 +1,4 @@
-﻿
-#include <iostream>
+﻿#include <iostream>
 #include<set>
 #include<map>
 
@@ -16,21 +15,22 @@ int main()
 	{
 
 		mi.clear();
-		int m=0, p=0;//m表示系数，p表示幂数；
-		
+		int m = 0, p = 0;//m表示系数，p表示幂数；
+
 		cin >> m >> p;
-		
+
 		int max = p;
-		
+
 		while (p >= 0)
 		{
-			if (mi.find(p)==mi.end())
-			{mi.insert(p);
+			if (mi.find(p) == mi.end())
+			{
+				mi.insert(p);
 				ans[p] = m;
 			}
 			else
 			{
-				
+
 				ans[p] += m;
 			}
 			cin >> m >> p;
@@ -41,7 +41,7 @@ int main()
 		}
 
 		cin >> m >> p;
-		
+
 		if (p > max)
 		{
 			max = p;
@@ -60,22 +60,22 @@ int main()
 				ans[p] += m;
 			}
 			cin >> m >> p;
-			
-				if (p > max)
-				{
-					max = p;
-				}
-			
+
+			if (p > max)
+			{
+				max = p;
+			}
+
 		}
 
-		
-		for (set<int>::reverse_iterator j=mi.rbegin();j!=mi.rend() ; j++)
+
+		for (set<int>::reverse_iterator j = mi.rbegin(); j != mi.rend(); j++)
 		{
 			if (ans[*j])
 			{
 				cout << "[ " << ans[*j] << " " << *j << " ] ";
 			}
-			
+
 		}
 		cout << endl;
 	}
@@ -88,4 +88,3 @@ int main()
 
 
 }
-
